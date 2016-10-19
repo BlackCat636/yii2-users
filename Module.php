@@ -1,12 +1,12 @@
 <?php
 
-namespace whitecat636\users;
+namespace blackcat636\users;
 
 use Yii;
 
 class Module extends \yii\base\Module
 {
-    public $controllerNamespace = 'whitecat636\users\controllers';
+    public $controllerNamespace = 'blackcat636\users\controllers';
 
     public $userPhotoUrl = '';
 
@@ -28,7 +28,7 @@ class Module extends \yii\base\Module
         if (!isset(Yii::$app->i18n->translations['users']) && !isset(Yii::$app->i18n->translations['users/*'])) {
             Yii::$app->i18n->translations['users'] = [
                 'class' => 'yii\i18n\PhpMessageSource',
-                'basePath' => '@whitecat636/users/messages',
+                'basePath' => '@blackcat636/users/messages',
                 'forceTranslation' => true,
                 'fileMap' => [
                     'users' => 'users.php'
@@ -51,7 +51,7 @@ class Module extends \yii\base\Module
         if (isset($this->customMailViews[$default])) {
             return $this->customMailViews[$default];
         } else {
-            return '@whitecat636/users/mail/' . $default;
+            return '@blackcat636/users/mail/' . $default;
         }
     }
 }
