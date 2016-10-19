@@ -1,6 +1,6 @@
 <?php
 
-namespace budyaga\users;
+namespace whitecat636\users;
 
 use Yii;
 
